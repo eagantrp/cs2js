@@ -29,5 +29,11 @@ function image(url,elementId,width,height,alt) {
 }
 
 function grabInput(elementId) {
-	return document.getElementById(elementId).value
+	var input = document.getElementById(elementId).value;
+	if (!Number.isNaN(parseInt(input))) {
+  	return parseInt(input)
+  }
+  else {
+  	return input
+  }
 }
